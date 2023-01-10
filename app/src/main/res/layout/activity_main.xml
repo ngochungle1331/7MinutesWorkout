@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/flStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/flHistory"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/item_circular_color_accent_background"
@@ -57,8 +57,9 @@
             android:textStyle="bold" />
 
     </FrameLayout>
-    
+
     <TextView
+        android:id="@+id/tvCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -67,7 +68,40 @@
         android:textSize="@dimen/default_button_text_size"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/flBIM"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="@id/flBIM"
+        app:layout_constraintEnd_toEndOf="@id/flBIM"/>
+
+    <FrameLayout
+        android:id="@+id/flHistory"
+        app:layout_constraintTop_toBottomOf="@+id/flStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flBIM"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/item_circular_color_accent_background"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_history"
+            android:layout_gravity="center"
+             />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="History"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/default_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/flHistory"
+        app:layout_constraintStart_toStartOf="@id/flHistory"
+        app:layout_constraintEnd_toEndOf="@id/flHistory"/>
     
 </androidx.constraintlayout.widget.ConstraintLayout>
